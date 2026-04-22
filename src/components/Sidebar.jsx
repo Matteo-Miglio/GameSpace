@@ -45,6 +45,7 @@ export default function Sidebar({ genres }) {
                         <li key={genre.id}>
                             <Link
                                 to={`/genre/${genre.slug}`}
+                                onClick={handleToggle}
                                 className={`
                                     group flex items-center justify-between
                                     px-4 py-2.5 rounded-xl
@@ -58,7 +59,7 @@ export default function Sidebar({ genres }) {
                                     text-sm font-bold uppercase tracking-tight
                                     group-hover:text-emerald-400
                                     transition-colors ${genre.slug === slug ? 'text-emerald-400' : "text-gray-400"} 
-                                    `}>
+                                    `} >
                                     {genre.name}
                                 </span>
 
