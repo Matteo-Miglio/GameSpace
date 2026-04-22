@@ -1,0 +1,97 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: dark --default, light --prefersdark, cupcake;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme{
+  --font-roboto: 'Roboto', sans-serif;
+  --font-playfair: 'Playfair', sans-serif;
+  --color-nav-gray: #0B1220;
+  --color-text: #E5E7EB;
+
+
+  --color-bg-dark: #0F172A;
+  --color-neon: #22C55E;
+  --color-session: #111827;
+  --color-ciano: #06B6D4;
+  --color-purple: #A78BFA;
+  
+
+
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  color: var(--color-text);
+  margin: 50px 0px;
+  font-size: xx-large;
+  text-align: center;
+
+}
+
+
+body{
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),url(/src/assets/city.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+@media screen and (max-width: 768px) {
+
+  html, body{
+    overflow-x: hidden;  
+  }
+
+}
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+  width: 8px;              
+  height: 8px;              
+}
+
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;      
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #143e32;     
+  border-radius: 10px;     
+  border: 2px solid #0a0a0a; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;      
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4); 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #143e32 #0a0a0a;
+}
+
+/* fine scroll bar */
+
+
+
+/* global loader */
+
+@keyframes load-progress {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(-10%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-load-progress {
+  animation: load-progress 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* fine loader */
