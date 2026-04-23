@@ -5,7 +5,7 @@ import { UserContext } from "../context/UserContext";
 import { CgProfile } from "react-icons/cg";
 import { IoIosArrowDown, IoIosSearch } from "react-icons/io";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
-
+import profgen from "../assets/profgen.png";
 export default function Navbar() {
     const [slug, setSlug] = useState("");
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -64,7 +64,7 @@ export default function Navbar() {
                         <div className="avatar cursor-pointer">
                             <div className="w-10 rounded-full ring-2 ring-emerald-500/20 group-hover:ring-emerald-500/50 transition-all overflow-hidden bg-[#161920] flex items-center justify-center">
                                 {user ? (
-                                    <img src={avatarUrl} alt="User" />
+                                    <img src={avatarUrl ? avatarUrl : profgen} alt="User" />
                                 ) : (
                                     <CgProfile className="text-2xl text-emerald-500" />
                                 )}
