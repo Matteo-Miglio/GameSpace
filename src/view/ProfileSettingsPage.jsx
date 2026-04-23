@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { useForm } from "react-hook-form";
 import routes from "../router/routes";
 import { supabase } from "../database/supabase";
+import profgen from "../assets/profgen.png";
 
 
 export default function ProfileSettingsPage() {
@@ -66,7 +67,7 @@ export default function ProfileSettingsPage() {
                 <div className="relative group mb-8">
                     <div className="absolute -inset-1 bg-emerald-500 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
                     <img 
-                        src={preview || avatarUrl || "https://picsum.photos/200"} 
+                        src={preview || avatarUrl || profgen} 
                         alt="Preview Avatar" 
                         className="relative w-48 h-48 rounded-full border-4 border-[#1c1c1c] object-cover shadow-2xl" 
                     />
