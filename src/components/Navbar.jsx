@@ -117,7 +117,7 @@ export default function Navbar() {
                         <p className="text-[10px] font-mono text-emerald-500/50 uppercase tracking-[0.3em] mb-2 px-2">Terminal Access</p>
                         {!user ? (
                             <>
-                                <Link to={routes.login} className="p-4 bg-white/5 rounded-xl text-xs font-bold uppercase tracking-widest text-gray-300 hover:text-emerald-400 transition-all">Login</Link>
+                                <Link to={routes.login} className="p-4 bg-white/5 rounded-xl text-xs font-bold uppercase tracking-widest text-gray-300 text-center transition-all">Login</Link>
                                 <Link to={routes.register} className="p-4 bg-emerald-500 rounded-xl text-xs font-bold uppercase tracking-widest text-black text-center transition-all">Register</Link>
                             </>
                         ) : (
