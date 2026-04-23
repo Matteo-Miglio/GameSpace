@@ -3,6 +3,8 @@ import { UserContext } from "../context/UserContext";
 import { Link } from "react-router";
 import routes from "../router/routes";
 import { supabase } from "../database/supabase";
+import profgen from "../assets/profgen.png";
+
 export default function ProfilePage() {
     const { user, profile, avatarUrl } = useContext(UserContext);
     const [userFavourites, setUserFavourites] = useState();
@@ -40,7 +42,7 @@ export default function ProfilePage() {
                     <header className="flex items-center gap-6 mb-12 border-b border-white/10 pb-10">
                         <div className="relative">
                             <img
-                                src={avatarUrl ?? "https://picsum.photos/200"}
+                                src={avatarUrl ?? profgen}
                                 alt="Profile"
                                 className="w-24 h-24 rounded-full border-2 border-emerald-500 shadow-[0_0_15px_rgba(16,185,129,0.4)]"
                             />
